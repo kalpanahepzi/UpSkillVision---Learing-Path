@@ -3,6 +3,7 @@
 This is a web-based learning platform designed to enable HR managers and instructors to create, manage, and deliver courses to students. The platform provides an intuitive interface for uploading course materials, managing user roles, and tracking student progress.
 
 **Table of Contents**
+
 1.Features
 2.Tech Stack
 3.Installation
@@ -20,11 +21,17 @@ This is a web-based learning platform designed to enable HR managers and instruc
 **User Authentication:** Secure login and registration system for all user roles.
 
 **Tech Stack**
-**Backend:** Python, Flask
-**Frontend:** HTML, CSS, JavaScript
-**Database:** SQL / MySQL
-**API Testing:** Postman
-**Version Control:** Git / GitHub
+
+**Backend:** 
+Python, Flask
+**Frontend:** 
+HTML, CSS, JavaScript
+**Database:** 
+SQL / MySQL
+**API Testing:** 
+Postman
+**Version Control:** 
+Git / GitHub
 
 **Installation**
 To run this project locally, follow these steps:
