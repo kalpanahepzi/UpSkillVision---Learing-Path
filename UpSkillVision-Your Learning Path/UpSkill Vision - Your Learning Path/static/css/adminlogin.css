@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.login-form {
+    padding: 40px;
+    background-color: #fff3e0;
+    border-right: 2px solid #ddd;
+    flex: 1;
+}
+
+.login-form h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.login-form label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.login-form button:hover {
+    background-color: #ffb300;
+}
+
+.login-form .signup {
+    background-color: #ff8a65;
+}
+
+.login-form .signup:hover {
+    background-color: #ff7043;
+}
+
+.login-form a {
+    display: block;
+    text-align: right;
+    margin-top: 15px;
+    color: #666;
+    text-decoration: none;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
+
+.role-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    
+    border-radius: 6px;
+    margin-bottom: 20px;
+    
+}
+
+.role-buttons button {
+    background-color: #ffcc00;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    flex: 1;
+    margin: 0 10px;
+    border-radius: 4px;
+}
+
+.role-buttons button:first-child {
+    margin-left: 0;
+}
+
+.role-buttons button:last-child {
+    margin-right: 0;
+}
+
+.role-buttons button:hover {
+    background-color: #ffb300;
+}
+
+.role-buttons .selected {
+    background-color: #ffb300;
+    color: white;
+}
+
+.illustration {
+    padding: 100px;
+    background-color: #fff3e0;
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.illustration h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #ffcc00;
+}
+
+.illustration h2 {
+    margin: 10px 0 20px;
+    font-size: 24px;
+    color: #ff8a65;
+}

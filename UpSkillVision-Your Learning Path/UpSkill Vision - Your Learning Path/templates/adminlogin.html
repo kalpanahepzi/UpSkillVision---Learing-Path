@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpSkill Vision Administration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/adminlogin.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="login-form">
+            <div class="role-buttons">
+                <button id="hrAdmin" class="role-button">HR Admin</button>
+                <button id="instructor" class="role-button">Instructor</button>
+                <button id="manager" class="role-button">Manager</button>
+            </div>
+            <h2>Welcome</h2>
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Employee ID number">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password">
+            <button id="login">Login</button>
+            <a href="#">Forgot Password?</a>
+            <button class="signup">Sign Up</button>
+        </div>
+        <div class="illustration">
+            <h1>UpSkill Vision</h1>
+            <h2>Administration</h2>
+            <img src="{{ url_for('static', filename='adminloginimage.jpeg') }}" alt="Illustration" style="width: 100%;">
+        </div>
+    </div>
+    
+</body>
+</html>

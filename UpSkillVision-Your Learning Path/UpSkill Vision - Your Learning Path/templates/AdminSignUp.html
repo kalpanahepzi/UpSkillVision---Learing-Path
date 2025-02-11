@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Sign Up</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/AdminSignup.css') }}">
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Employee Sign Up</h1>
+            <form id="signup-form" onsubmit="return validateForm()">
+                <label for="employee-name">Employee Name</label>
+                <input type="text" id="employee-name" placeholder="Employee Name" required>
+                
+                <label for="role">Role</label>
+                <input type="text" id="role" placeholder="Role" required>
+                
+                <label for="identity-number">Identity Number</label>
+                <input type="text" id="identity-number" placeholder="Identity Number" required maxlength="5">
+                
+                <label for="username">User name</label>
+                <input type="text" id="username" placeholder="User name" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password" required>
+                
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                
+                <div class="note">Password must contain at least one capital letter, one symbol, and be at least 8 characters long</div>
+                
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+        <div class="illustration">
+            <img src="{{ url_for('static', filename='signupimage.png') }}" alt="Illustration">
+        </div>
+    </div>
+    <script>
+        function validateForm() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
+            var identityNumber = document.getElementById("identity-number").value;
+            var passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.{8,})/;
+
+            if (!passwordRegex.test(password)) {
+                alert("Password must be at least 8 characters long, contain at least one uppercase letter, and one symbol.");
+                return false;
+            }
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+            if (!/^\d{5}$/.test(identityNumber)) {
+                alert("Identity Number must be exactly 5 digits long.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

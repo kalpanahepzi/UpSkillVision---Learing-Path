@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #6a1b9a;
+    color: #fff;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-right: 50px;
+}
+.left-section {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+.left-section img {
+    width: 1080%;
+    max-width: 600px;
+}
+.right-section {
+    flex: 1;
+    background-color: #fff;
+    color: #000;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.tabs button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: #d1c4e9;
+    color: #000;
+    cursor: pointer;
+    font-size: 16px;
+}
+.tabs button.active {
+    background-color: #b39ddb;
+    margin-right: 7px;
+    border-radius: 6px;
+
+}
+.tabs button:nth-child(2) {
+    border-radius: 6px; 
+}
+
+.login-form {
+    text-align: left;
+
+}
+.login-form h2 {
+    margin-bottom: 20px;
+}
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+    border: right 20px; 
+    
+}
+.login-form input {
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #59687e;
+    border-radius: 6px;
+    text-align:left;
+
+    
+    
+}
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6a1b9a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.login-form a {
+    display: block;
+    text-align: right;
+    margin-bottom: 20px;
+    color: #6a1b9a;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.login-form .create-account {
+    background-color: #8e24aa;
+}
+
+.flash-messages {
+    margin-bottom: 20px;
+    padding: 10px;
+    list-style-type: none;
+}
+
+.flash-messages .alert {
+    padding: 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.flash-messages .alert.alert-success {
+    background-color: #4CAF50;
+}
+
+.flash-messages .alert.alert-error {
+    background-color: #f44336;
+}
+
+.flash-messages .alert.alert-info {
+    background-color: #2196F3;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - UpSkill Vision</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/UserSignup.css') }}">
+</head>
+<body>
+    <div class="registration-form">
+        <h2>New User Registration</h2>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul class="flash-messages">
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        {% endwith %}
+        <form method="POST" action="{{ url_for('signup_page') }}" onsubmit="return validatePassword()">
+            <div class="form-column">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first_name" placeholder="First Name" required>
+                
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last_name" placeholder="Last Name" required>
+                
+                <label for="phone-number">Phone Number</label>
+                <input type="text" id="phone-number" name="phone_number" placeholder="Phone Number" required>
+                
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="date_of_birth" required>
+                
+                <label for="country">Country</label>
+                <select id="country" name="country" required>
+                    <option value="" disabled selected>Select your country</option>
+                    <option value="India">India</option>
+                    <option value="United States">United States</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <!-- Add more countries as needed -->
+                </select>
+            </div>
+            <div class="form-column">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+                
+                <label for="education">Education</label>
+                <input type="text" id="education" name="education" placeholder="Education" required>
+                
+                <label for="college">College / Organization</label>
+                <input type="text" id="college" name="organization" placeholder="College / Organization" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                
+                <label for="terms">
+                    <input type="checkbox" id="terms" required>
+                    I agree to the <a href="#">Terms and Conditions</a>
+                </label>
+                
+                <p class="privacy-policy">
+                    Your use of the platform is governed by our Privacy Policy. By creating an account, you agree to the collection and use of your data as outlined in our policy.
+                </p>
+                
+                <button type="submit">Create an Account</button>
+                <p>Already have an account? <a href="{{ url_for('login_page') }}">Log In</a></p>
+            </div>
+        </form>
+    </div>
+    <script>
+        function validatePassword() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
+            var passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.{8,})/;
+            if (!passwordRegex.test(password)) {
+                alert("Password must be at least 8 characters long, contain at least one uppercase letter, and one symbol.");
+                return false;
+            }
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
